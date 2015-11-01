@@ -13,8 +13,8 @@
   <% if user_signed_in? %>
   <ul>
     <li><%= link_to 'Submit Link', new_link_path %></li>
-    <li><%= link to 'Account', edit_user_registration_path %></li>
-    <li><%= link to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+    <li><%= link_to 'Account', edit_user_registration_path %></li>
+    <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
   </ul>
   <% else %>
   <ul>
