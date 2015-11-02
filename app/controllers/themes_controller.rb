@@ -8,6 +8,10 @@ class ThemesController < ApplicationController
     @theme = Theme.new
   end
 
+  def show
+    @theme = Theme.find(params[:id])
+  end
+
   def create
     @theme = Theme.new(theme_params)
 
