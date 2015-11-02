@@ -1,0 +1,127 @@
+
+.cn-wrapper {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 10;
+  margin-top: -13em;
+  margin-left: -13.5em;
+  width: 27em;
+  height: 27em;
+  border-radius: 50%;
+  background: transparent;
+  opacity: 0;
+  transition: all .3s ease 0.3s;
+  transform: scale(0.1);
+  pointer-events: none;
+  overflow: hidden; 
+}
+
+/*cover to prevent extra space of anchors from being clickable*/
+.cn-wrapper:after{
+  color: transparent;
+  content:".";
+  display:block;
+  font-size:2em;
+  width:6.2em;
+  height:6.2em;
+  position: absolute;
+  left: 50%;
+  margin-left: -3.1em;
+  top:50%;
+  margin-top: -3.1em;
+  border-radius: 50%;
+  z-index:10;
+}
+
+.cn-wrapper li {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  margin-top: -1.3em;
+  margin-left: -10em;
+  width: 10em;
+  height: 10em;
+  font-size: 1.5em;
+  transition: all .3s ease;
+  transform: rotate(76deg) skew(60deg);
+  transform-origin: 100% 100%;
+  pointer-events: none;
+}
+
+.cn-wrapper li a {
+  position: absolute;
+  position: fixed; /* fix the "displacement" bug in webkit browsers when using tab key */
+  right: -7.25em;
+  bottom: -7.25em;
+  display: block;
+  width: 14.5em;
+  height: 14.5em;
+  border-radius: 50%;
+  background: #429a67;
+  background: radial-gradient(transparent 35%, #429a67 35%);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2em;
+  line-height: 2;
+  transition: all .3s ease;
+  transform: skew(-60deg) rotate(-75deg) scale(1);
+  pointer-events: auto;
+}
+
+.cn-wrapper li a span {
+  position: relative;
+  top: 1.8em;
+  display: block;
+  font-size: .5em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cn-wrapper li a:hover,
+.cn-wrapper li a:active,
+.cn-wrapper li a:focus {
+  background: radial-gradient(transparent 35%, #449e6a 35%);
+}
+
+.opened-nav {
+  border-radius: 50%;
+  opacity: 1;
+  transition: all .3s ease;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.opened-nav li {
+  transition: all .3s ease .3s;
+}
+
+.opened-nav li:first-child {
+  transform: rotate(-20deg) skew(60deg);
+}
+
+.opened-nav li:nth-child(2) {
+  transform: rotate(12deg) skew(60deg);
+}
+
+.opened-nav  li:nth-child(3) {
+  transform: rotate(44deg) skew(60deg);
+}
+
+.opened-nav li:nth-child(4) {
+  transform: rotate(76deg) skew(60deg);
+}
+
+.opened-nav li:nth-child(5) {
+  transform: rotate(108deg) skew(60deg);
+}
+
+.opened-nav li:nth-child(6) {
+  transform: rotate(140deg) skew(60deg);
+}
+
+.opened-nav li:nth-child(7) {
+  transform: rotate(172deg) skew(60deg);
+}
