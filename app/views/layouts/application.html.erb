@@ -4,6 +4,8 @@
   <title>LinkAggregatorProject</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="js/polyfills.js"></script>
+  <script src="js/demo2.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -18,6 +20,24 @@
     <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
     <li><%= link_to 'New Theme', new_theme_path %></li>
   </ul>
+
+  <div class="component">
+    <h2>Mission Control</h2>
+    <!-- Start Nav Structure -->
+    <button class="cn-button" id="cn-button">Menu</button>
+    <div class="cn-wrapper" id="cn-wrapper">
+      <ul>
+        <li><a href="#"><span>Sign Out</span></a></li>
+        <li><a href="#"><span>Account</span></a></li>
+        <li><a href="#"><span>Submit Link</span></a></li>
+        <li><a href="#"><span>Home</span></a></li>
+        <li><a href="#"><span>New theme</span></a></li>
+        <li><a href="#"><span>Profile</span></a></li>
+        <li><a href="#"><span>About</span></a></li>
+       </ul>
+    </div>
+    <!-- End of Nav Structure -->
+  </div>
   <% else %>
   <ul>
     <li><%= link_to 'Home', links_path %></li>
