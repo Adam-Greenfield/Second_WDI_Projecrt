@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :links
   root to: "links#index"
   devise_for :users
+  resources :themes
 
   resources :links do
     member do
