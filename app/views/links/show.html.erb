@@ -17,7 +17,7 @@
 
 <p>
   <strong>Theme:</strong>
-  <%= @link.theme.name %>
+  <%= link_to @link.theme.name, theme_path(@link.theme) %>
 </p>
 
 <% if @link.user == current_user %>
