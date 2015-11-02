@@ -21,6 +21,31 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :second_name, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Biography %><br />
+    <%= f.text_field :bio, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :thumbnail %><br />
+    <%= f.text_field :thumbnail, autocomplete: "off" %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

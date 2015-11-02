@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :comments
   resources :links
-  devise_for :users
   root to: "links#index"
+  devise_for :users
 
   resources :links do
     member do
