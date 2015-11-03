@@ -19,8 +19,9 @@ body {
 }
 
 body {
-
-  color: black;
+  font-family: 'Titillium Web', sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 900;
 }
 
 section {

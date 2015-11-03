@@ -3,6 +3,7 @@
 <head>
 
   <title>LinkAggregatorProject</title>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:300' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -26,7 +27,7 @@
     <li><%#= link_to 'Home', links_path %></li>
     <li><%#= link_to 'Submit Link', new_link_path %></li>
     <li><%#= link_to 'Account', edit_user_registration_path %></li>
-    <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+    <li><%#= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
     <li><%#= link_to 'New Theme', new_theme_path %></li>
   </ul>
 
@@ -59,6 +60,11 @@
 
   <div class="missioncontrol">
   <h2 class="mission">Mission Control</h2>
+  <% if user_signed_in? %>
+  <%= link_to 'Sign Out', destroy_user_session_path, class: "signOut", :method => :delete %>
+  <% else %>
+  <%= link_to 'Sign In', new_user_session_path, class: "signOut" %>
+  <% end %>
   </div>
 </body>
 
