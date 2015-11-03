@@ -6,7 +6,7 @@
 </div>
 <table class="linktable">
   <thead>
-  <% @links.each do |link| %>
+  <% @links.order(:cached_weighted_score => :desc).each do |link| %>
     <div class="link row clearfix">
       <h2>
         <%= link_to link.title, link %><br>
