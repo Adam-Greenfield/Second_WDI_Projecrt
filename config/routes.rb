@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: "links#index"
   devise_for :users
   resources :themes
+  get "about" => "pages#about"
 
   resources :links do
     member do

@@ -8,7 +8,8 @@
   background-color: black;
 }
 .mission {
-  color: black;
+  font-family: 'Gruppo', cursive;
+  letter-spacing: 4px;
   position: fixed;
   bottom: -1400px;
   left: 50%;
@@ -22,4 +23,8 @@
   background-color: black;
   opacity: 0.4;
   border-radius: 900px 900px 0 0;
+}
+
+.linkTitle {
+  color: #0C7EFD;
 }
