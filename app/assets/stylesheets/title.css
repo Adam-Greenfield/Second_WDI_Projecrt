@@ -14,7 +14,7 @@ body{
 
 .cs-text {
   width: 675px;
-  margin: 120px auto 30px;
+  margin: 60px auto 30px;
   cursor: default;
 }
 
@@ -117,3 +117,33 @@ body{
   -ms-transform: scale(1);
   transform: scale(1);
 }
+
+.themeTitle {
+  width: 80%;
+
+  position: relative;
+  margin: 15px auto;
+
+}
+
+.themeName {
+  display: inline-block;
+  position: relative;
+  color: white;
+  margin: 0 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -14,6 +14,14 @@
 </head>
 <body>
 <header>
+<div class="themeTitle">
+<% @themes = Theme.all%>
+<% @themes.shuffle.each do |theme| %>
+<%= link_to theme.name, theme, class: "themeName" %>
+<% end %>
+</div>
+
+
   <h2 class="cs-text">
     <span class="cs-text-cut">Nova</span>
     <span class="cs-text-mid">Local-CLuster</span>
