@@ -30,6 +30,7 @@ section {
   margin: 0 50px;
 }
 
+
 .csstransforms .cn-wrapper {
   font-size: 1em;
   width: 26em;
@@ -99,6 +100,14 @@ section {
   border-radius: 50%;
   cursor: pointer;
   z-index: 11;
+}
+
+.cn-button:focus,
+.cn-button.focus {
+  background-image: none;
+    outline: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
 }
 
 .cn-button:hover,
