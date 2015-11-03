@@ -3,6 +3,7 @@
 <head>
 
   <title>LinkAggregatorProject</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:300' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
@@ -18,9 +19,10 @@
     <span class="cs-text-mid">Local-CLuster</span>
     <span class="cs-text-cut">Nova</span>
   </h2>
+
 </header>
   <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p> -->
+  <p class="alert"><%= alert %></p>
 
   <% if user_signed_in? %>
   <ul>
@@ -57,7 +59,9 @@
   <div class="missioncontrol">
   <h2 class="mission">Mission Control</h2>
   <% if user_signed_in? %>
+  <div class="missionSub missionIn">
   <%= link_to 'Sign Out', destroy_user_session_path, class: "signOut", :method => :delete %>
+  </div>
   <% else %>
   <div class="missionSub">
   <%= link_to 'Sign In', new_user_session_path, class: "signOut" %>
