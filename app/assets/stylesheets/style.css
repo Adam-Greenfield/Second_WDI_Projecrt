@@ -1,5 +1,9 @@
 @import url(http://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css);
 
+div {
+  max-width: 800px;
+  margin: 0 auto;
+}
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -17,6 +21,12 @@ body {
 body {
 
   color: black;
+}
+
+section {
+  max-width: 800px;
+  position: relative;
+  margin: 0 50px;
 }
 
 .csstransforms .cn-wrapper {

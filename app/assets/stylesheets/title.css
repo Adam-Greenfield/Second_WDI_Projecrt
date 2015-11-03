@@ -12,7 +12,7 @@ body{
 }
 
 .cs-text {
-  width: 645px;
+  width: 675px;
   margin: 120px auto 30px;
   cursor: default;
 }
@@ -50,7 +50,7 @@ body{
   text-transform: uppercase;
   text-align: center;
   margin-top: 6px;
-  font-family: 'Sancreek', cursive;
+  font-family: 'Megrim', cursive;
   text-shadow: 7px 2px 0 rgba(255,255,255,0.3);
 }
 
@@ -62,8 +62,9 @@ body{
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
   text-transform: uppercase;
-  font-size: 50px;
-  letter-spacing: 50px;
+  font-size: 25px;
+  left: 98px;
+  letter-spacing: 20px;
   line-height: 50px;
   text-indent: 20px;
   position: absolute;

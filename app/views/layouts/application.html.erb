@@ -3,6 +3,7 @@
 <head>
 
   <title>LinkAggregatorProject</title>
+  <link href='https://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -12,7 +13,7 @@
 <header>
   <h2 class="cs-text">
     <span class="cs-text-cut">Nova</span>
-    <span class="cs-text-mid">Local CLuster</span>
+    <span class="cs-text-mid">Local-CLuster</span>
     <span class="cs-text-cut">Nova</span>
   </h2>
 </header>
@@ -51,7 +52,10 @@
     <li><%= link_to 'Sign In', new_user_session_path %></li>
   </ul>
   <% end %>
+  <section>
   <%= yield %>
+  </section>
+  
   <div class="missioncontrol">
   <h2 class="mission">Mission Control</h2>
   </div>
