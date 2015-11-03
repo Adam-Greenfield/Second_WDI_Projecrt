@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Links</h1>
-
-<table>
+<div class="sidebar">
+  
+</div>
+<table class="linktable">
   <thead>
   <% @links.each do |link| %>
     <div class="link row clearfix">
@@ -19,11 +21,12 @@
           <%= link.get_upvotes.size %>
         <% end %>
         <%= link_to dislike_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
-          <span class="glyphicon glyphicon-chevron-down">
+          <span class="glyphicon glyphicon-chevron-down"></span>
           Downvote
           <%= link.get_downvotes.size %>
         <% end %>
       </div>
     </div>
   <% end %>
+ 
 

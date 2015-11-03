@@ -3,25 +3,29 @@
 <head>
 
   <title>LinkAggregatorProject</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 
 </head>
 <body>
+<header>
+  <h1></h1>
+</header>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
   <% if user_signed_in? %>
-  <ul>
-    <li><%= link_to 'Home', links_path %></li>
-    <li><%= link_to 'Submit Link', new_link_path %></li>
-    <li><%= link_to 'Account', edit_user_registration_path %></li>
-    <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
-    <li><%= link_to 'New Theme', new_theme_path %></li>
-  </ul>
+<!--   <ul>
+    <li><%#= link_to 'Home', links_path %></li>
+    <li><%#= link_to 'Submit Link', new_link_path %></li>
+    <li><%#= link_to 'Account', edit_user_registration_path %></li>
+    <li><%#= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+    <li><%#= link_to 'New Theme', new_theme_path %></li>
+  </ul> -->
 
   <div class="component">
+
     <!-- Start Nav Structure -->
     <button class="cn-button" id="cn-button">+</button>
     <div class="cn-wrapper" id="cn-wrapper">
@@ -44,6 +48,11 @@
   </ul>
   <% end %>
   <%= yield %>
-
+  <div class="missioncontrol">
+  <h2 class="mission">Mission Control</h2>
+  </div>
 </body>
+
+
+
 </html>

@@ -3,7 +3,25 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
   margin: 0 auto;
-  width: 800px;
   position: relative;
   left: 100px;
+  width: 800px;
+}
+.missioncontrol {
+  text-align: center;
+  margin: 0 auto;
+  background-color: black;
+}
+.mission {
+  color: black;
+  position: fixed;
+  bottom: -1400px;
+  margin: 0 auto;
+  width: 83.5%;
+  font-size: 20px;
+  color: white;
+  height: 1500px;
+  line-height: 60px;
+  background-color: black;
+  border-radius: 900px 900px 0 0;
 }

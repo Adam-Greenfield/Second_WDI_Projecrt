@@ -1,4 +1,4 @@
-window.onload = function(){
+function buttonMagic(){
 
 
 	var button = document.getElementById('cn-button'),
@@ -8,7 +8,6 @@ window.onload = function(){
 	  //open and close menu when the button is clicked
 	  var open = false;
 	  button.addEventListener('click', handler, false);
-	  button.addEventListener('focus', handler, false);
 	  wrapper.addEventListener('click', cnhandle, false);
 
 	  function cnhandle(e){
@@ -41,4 +40,5 @@ window.onload = function(){
 	  document.addEventListener('click', closeNav);
 }
 
+window.onload = buttonMagic;
 
