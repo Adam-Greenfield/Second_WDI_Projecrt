@@ -10,6 +10,7 @@ class ThemesController < ApplicationController
 
   def show
     @theme = Theme.find(params[:id])
+    @links = @theme.links.paginate(page: params[:page], per_page: 15)
   end
 
   def create

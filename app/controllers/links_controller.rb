@@ -7,6 +7,7 @@ class LinksController < ApplicationController
     @links = Link.all
     @search = Link.search(params[:q])
     @links = @search.result
+    @links = Link.all.paginate(page: params[:page], per_page: 15)
   end
 
   # GET /links/1
