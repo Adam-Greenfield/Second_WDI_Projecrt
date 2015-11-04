@@ -1,9 +1,9 @@
-<h1><%= @theme.name %></h1>
+<h1 class="themeHeader"><%= @theme.name %></h1>
 
 <% @theme.links.each do |link| %>
   <div class="link row clearfix">
     <h2>
-      <%= link_to link.title, link %><br>
+      <%= link_to link.title, link, class: "linkTitle" %><br>
       <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.username %></small>
     </h2>
 
