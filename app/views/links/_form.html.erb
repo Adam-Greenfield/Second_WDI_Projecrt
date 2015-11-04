@@ -28,6 +28,6 @@
     <%= f.collection_select(:theme_id, Theme.all, :id, :name) %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "submit", :class => "submitButton" %>
   </div>
 <% end %>

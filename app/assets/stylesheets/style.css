@@ -28,6 +28,7 @@ section {
   max-width: 800px;
   position: relative;
   margin: 0 auto;
+  color: white;
 }
 
 
@@ -310,4 +311,11 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
     height: 3em;
     width: 3em;
   }
+}
+
+.submitButton {
+  color: black;
+  size: 100px;
+  padding: 2px 4px;
+  margin: 10px 0;
 }
