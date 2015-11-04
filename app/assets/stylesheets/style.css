@@ -209,19 +209,18 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
 .csstransforms .cn-wrapper li:nth-child(odd) a {
   background: -webkit-linear-gradient(black, #800080, black);
 
-/*  background-color: hsla(0, 88%, 63%, 1);*/
+  background-color: hsla(0, 88%, 63%, 1);
 }
 
 .csstransforms .cn-wrapper li:nth-child(even) a {
   background: -webkit-linear-gradient(black, #8B008B, #800080, red);
-
-/*  background-color: hsla(0, 88%, 65%, 1);*/
+  background-color: hsla(0, 88%, 65%, 1);
 }
 
 /* active style */
 .csstransforms .cn-wrapper li.active a {
   background-color: #8B008B;
-/*  background-color: hsla(0, 88%, 70%, 1);*/
+  background-color: hsla(0, 88%, 70%, 1);
 }
 
 
@@ -229,7 +228,7 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
 .csstransforms .cn-wrapper li:not(.active) a:hover,
 .csstransforms .cn-wrapper li:not(.active) a:active,
 .csstransforms .cn-wrapper li:not(.active) a:focus {
-  background-color: #FF00FF;
+  background: -webkit-linear-gradient(black, white, red);
   background-color: hsla(0, 88%, 70%, 1);
 }
 .csstransforms .cn-wrapper li:not(.active) a:focus
