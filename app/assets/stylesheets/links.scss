@@ -8,7 +8,7 @@
   background-color: black;
 }
 .mission {
-  letter-spacing: 4px;
+  letter-spacing: 0;
   position: fixed;
   bottom: -1400px;
   left: 50%;
@@ -43,13 +43,13 @@
 .signOut {
   color: white;
   margin: 20px;
-  letter-spacing: 4px;
+  letter-spacing: 0px;
+  font-size: 20px;
 
 
 
   // left: 50%;
   // transform: translateX(-30%)
-
 }
 
 .author {
@@ -64,4 +64,9 @@
   display: inline-block;
   margin: 0 auto;
   width: 400px;
+}
+
+.btn-sm {
+  background-color: black;
+  color: white;
 }
