@@ -80,5 +80,29 @@
 }
 
 .search {
+  left: 65%;
+  width: 10%;
+  margin: 0 auto;
   position: relative;
+  text-align: right;
+  display: inline-block;
 }
+
+.searchButton {
+  position: relative;
+  text-align: right;
+  max-width: 70%;
+  margin-top: 10px;
+}
+
+.radius-right {
+  color: white;
+  background-color: black;
+}
+
+.searchForm {
+  position: relative;
+  text-align: right;
+  max-width: 70%;
+}
+

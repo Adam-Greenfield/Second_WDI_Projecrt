@@ -2,18 +2,18 @@
 
 
 
-  <div class ="search">
+
   <% content_for :search do %>
-    <div class="large-8 small-9 columns">
+    <div class="searchForm">
     <%= search_form_for @search do |f| %>
       <%= f.text_field :title_cont, class: "radius-left expand", placeholder: "Link" %>
     </div>
-      <div class="large-4 small-3 columns">
-        <%= f.submit "Search", class: "radius-right button" %>
+      <div class="searchButton">
+        <%= f.submit "Search", class: "btn btn-default btn-sm" %>
       </div>
     <% end %>
   <% end %>
-  </div>
+
 
 <table class="linktable">
   <thead>
