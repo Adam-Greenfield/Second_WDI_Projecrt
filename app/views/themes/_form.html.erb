@@ -4,9 +4,9 @@
       <h2><%= pluralize(@theme.errors.count, "error") %> prohibited this theme from being saved:</h2>
 
       <ul>
-      <% @theme.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @theme.errors.full_messages.each do |message| %>
+         <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>

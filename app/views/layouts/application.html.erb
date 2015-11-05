@@ -6,57 +6,51 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:300' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
   <link rel="stylesheet" href="animate.min.css">
   
 
 </head>
 <body background=<%= randomized_background_image %>>
-<header>
-<div class="themeTitle">
-<% @themes = Theme.all%>
-<% @themes.sample(9).each do |theme| %>
-<%= link_to theme.name, theme, class: "themeName" %>
-<% end %>
-</div>
+  <header>
+    <div class="themeTitle">
+      <% @themes = Theme.all%>
+      <% @themes.sample(9).each do |theme| %>
+      <%= link_to theme.name, theme, class: "themeName" %>
+      <% end %>
+    </div>
 
 
-  <h2 class="cs-text">
-    <span class="cs-text-cut">Nova</span>
-    <span class="cs-text-mid">Local-CLuster</span>
-    <span class="cs-text-cut">Nova</span>
-  </h2>
+    <h2 class="cs-text">
+      <span class="cs-text-cut">Nova</span>
+      <span class="cs-text-mid">Local-CLuster</span>
+      <span class="cs-text-cut">Nova</span>
+    </h2>
 
-</header>
-<div class="search">
-<%= yield(:search) %>
-</div>
+  </header>
+  <div class="search">
+    <%= yield(:search) %>
+  </div>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
   <% if user_signed_in? %>
-  <ul>
-    <li><%#= link_to 'Home', links_path %></li>
-    <li><%#= link_to 'Submit Link', new_link_path %></li>
-    <li><%#= link_to 'Account', edit_user_registration_path %></li>
-    <li><%#= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
-    <li><%#= link_to 'New Theme', new_theme_path %></li>
-  </ul>
+
 
   <div class="component">
 
     <!-- Start Nav Structure -->
     <button class="cn-button" id="cn-button">+</button>
     <div class="cn-wrapper" id="cn-wrapper">
-        <ul>
-          <li><a href="/themes/new"><span class="fa fa-paint-brush"></span></a></li>
-          <li><a href="/links/new"><span class="fa fa-times"></span></a></li>
-          <li><a href="/links"><span class="fa fa-rocket"></span></a></li>
-          <li><a href="/users/edit"><span class="fa fa-cogs"></span></a></li>
-          <li><a href="/about"><span class="fa fa-info"></span></a></li>
-         </ul>
+      <ul>
+        <li><a href="/themes/new"><span class="fa fa-paint-brush"></span></a></li>
+        <li><a href="/links/new"><span class="fa fa-times"></span></a></li>
+        <li><a href="/links"><span class="fa fa-rocket"></span></a></li>
+        <li><a href="/users/edit"><span class="fa fa-cogs"></span></a></li>
+        <li><a href="/about"><span class="fa fa-info"></span></a></li>
+      </ul>
     </div>
     <div id="cn-overlay" class="cn-overlay"></div>
     <!-- End Nav Structure -->
@@ -65,22 +59,22 @@
 
   <% end %>
   <section>
-  <%= yield %>
+    <%= yield %>
   </section>
 
   <div class="missioncontrol">
-  <h2 class="mission">Mission Control</h2>
-  <% if user_signed_in? %>
-  <div class="missionSub missionIn">
-  <%= link_to 'Sign Out', destroy_user_session_path, class: "signOut", :method => :delete %>
-  </div>
-  <% else %>
-  <div class="missionSub">
-  <%= link_to 'Sign In', new_user_session_path, class: "signOut" %>
-  <%= link_to 'Home', links_path, class: "signOut" %>
-  <%= link_to 'Sign Up', new_user_registration_path, class: "signOut" %>
-  </div>
-  <% end %>
+    <h2 class="mission">Mission Control</h2>
+    <% if user_signed_in? %>
+    <div class="missionSub missionIn">
+      <%= link_to 'Sign Out', destroy_user_session_path, class: "signOut", :method => :delete %>
+    </div>
+    <% else %>
+    <div class="missionSub">
+      <%= link_to 'Sign In', new_user_session_path, class: "signOut" %>
+      <%= link_to 'Home', links_path, class: "signOut" %>
+      <%= link_to 'Sign Up', new_user_registration_path, class: "signOut" %>
+    </div>
+    <% end %>
   </div>
   <br />
   <br />

@@ -3,29 +3,29 @@
 
 
 
-  <% content_for :search do %>
-    <div class="searchForm">
+<% content_for :search do %>
+  <div class="searchForm">
     <%= search_form_for @search do |f| %>
-      <%= f.text_field :title_cont, class: "radius-left expand", placeholder: "Link" %>
-    </div>
-      <div class="searchButton">
-        <%= f.submit "Search", class: "btn btn-default btn-sm" %>
-      </div>
-    <% end %>
+    <%= f.text_field :title_cont, class: "radius-left expand", placeholder: "Link" %>
+  </div>
+  <div class="searchButton">
+    <%= f.submit "Search", class: "btn btn-default btn-sm" %>
+  </div>
   <% end %>
+<% end %>
 
 
 
-  <div class="sideBar">
+<div class="sideBar">
   <h3>Todays Featured Institute</h3>
   <h2 class="sponsor">NASA</h2>
   <p>Find out about our sponsorship programme <a href="/about">here</a></p>
-  </div>
+</div>
 
 <div class="linksAll"
 <table class="linktable">
   <thead>
-  <% @links.order(:cached_weighted_score => :desc).each do |link| %>
+    <% @links.order(:cached_weighted_score => :desc).each do |link| %>
     <div class="link row clearfix">
       <h2>
         <%= link_to link.title, link, class: "linkTitle" %><br>
@@ -34,22 +34,22 @@
 
       <div class="btn-group">
         <a class="btn btn-default btn-sm" href="<%= link.url %>">Visit Link</a>
-        <%= link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
-          <span class="glyphicon glyphicon-chevron-up"></span>
-          Upvote
-          <%= link.get_upvotes.size %>
-        <% end %>
-        <%= link_to dislike_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
-          <span class="glyphicon glyphicon-chevron-down"></span>
-          Downvote
-          <%= link.get_downvotes.size %>
-        <% end %>
+          <%= link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
+        <span class="glyphicon glyphicon-chevron-up"></span>
+        Upvote
+         <%= link.get_upvotes.size %>
+         <% end %>
+         <%= link_to dislike_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
+        <span class="glyphicon glyphicon-chevron-down"></span>
+        Downvote
+         <%= link.get_downvotes.size %>
+         <% end %>
       </div>
     </div>
 
-  <% end %>
+    <% end %>
   </div>
 
   <%= will_paginate @links %>
- 
+
 

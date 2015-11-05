@@ -1,7 +1,7 @@
 
 <div class="themeBox">
   <p>
-  <strong class="themeLink"> <%= @link.title %></strong>
+    <strong class="themeLink"> <%= @link.title %></strong>
   </p>
 
   <p>
@@ -14,7 +14,7 @@
   </p>
 
   <% if @link.user == current_user %>
-  <%= link_to 'Edit', edit_link_path(@link), :class => "linkShow" %> |
+    <%= link_to 'Edit', edit_link_path(@link), :class => "linkShow" %> |
   <% end %>
   <%= link_to 'Back', links_path, :class => "linkShow" %>
 </div>
@@ -26,7 +26,7 @@
 <div id="comments">
   <%= render :partial => @link.comments %>
 </div>
-<%= simple_form_for [@link, Comment.new]  do |f| %>
+  <%= simple_form_for [@link, Comment.new]  do |f| %>
 <div class="field">
   <%= f.text_area :body, class: "form-control" %>
 </div>
