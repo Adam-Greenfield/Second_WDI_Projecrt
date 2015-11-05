@@ -1,5 +1,5 @@
 <h1 class="themeHeader"><%= @theme.name %></h1>
-<h2 class="themeUsers">Home of <%= @theme.links.count(:user_id, distinct: true)%></h2>
+<h2 class="themeUsers">Home of <%= @theme.users.uniq.count %> Users</h2>
 
 <% @links.order(:cached_weighted_score => :desc).each do |link| %>
   <div class="link row clearfix">
