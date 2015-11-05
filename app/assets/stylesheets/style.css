@@ -53,7 +53,9 @@ section {
   position: relative;
   text-align: center;
 }
-
+.linkShow {
+  color: white;
+}
 .csstransforms .cn-wrapper {
   font-size: 1em;
   width: 26em;

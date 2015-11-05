@@ -8,11 +8,14 @@ class LinksController < ApplicationController
     @search = Link.search(params[:q])
     @links = @search.result
     @links = Link.all.paginate(page: params[:page], per_page: 15)
+    
+
   end
 
   # GET /links/1
   # GET /links/1.json
   def show
+  
   end
 
   # GET /links/new

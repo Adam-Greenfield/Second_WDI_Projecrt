@@ -5,18 +5,18 @@
   </p>
 
   <p>
-    <strong> <a href=<%= @link.url %>>Visit</a></strong> 
+    <strong><a href=<%= @link.url %> class="linkShow">Visit</a></strong> 
   </p>
 
   <p>
     <strong>Theme:</strong>
-    <%= link_to @link.theme.name, theme_path(@link.theme) %>
+    <%= link_to @link.theme.name, theme_path(@link.theme), :class => "linkShow" %>
   </p>
 
   <% if @link.user == current_user %>
-  <%= link_to 'Edit', edit_link_path(@link) %> |
+  <%= link_to 'Edit', edit_link_path(@link), :class => "linkShow" %> |
   <% end %>
-  <%= link_to 'Back', links_path %>
+  <%= link_to 'Back', links_path, :class => "linkShow" %>
 </div>
 
 <h3 class="comments_title">
