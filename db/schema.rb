@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20151103134031) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "comments", force: :cascade do |t|
     t.integer  "link_id"
     t.text     "body"
@@ -21,8 +24,8 @@ ActiveRecord::Schema.define(version: 20151103134031) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "comments", ["link_id"], name: "index_comments_on_link_id"
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+  add_index "comments", ["link_id"], name: "index_comments_on_link_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "links", force: :cascade do |t|
     t.string   "title"
@@ -41,14 +44,14 @@ ActiveRecord::Schema.define(version: 20151103134031) do
     t.float    "cached_weighted_average", default: 0.0
   end
 
-  add_index "links", ["cached_votes_down"], name: "index_links_on_cached_votes_down"
-  add_index "links", ["cached_votes_score"], name: "index_links_on_cached_votes_score"
-  add_index "links", ["cached_votes_total"], name: "index_links_on_cached_votes_total"
-  add_index "links", ["cached_votes_up"], name: "index_links_on_cached_votes_up"
-  add_index "links", ["cached_weighted_average"], name: "index_links_on_cached_weighted_average"
-  add_index "links", ["cached_weighted_score"], name: "index_links_on_cached_weighted_score"
-  add_index "links", ["cached_weighted_total"], name: "index_links_on_cached_weighted_total"
-  add_index "links", ["user_id"], name: "index_links_on_user_id"
+  add_index "links", ["cached_votes_down"], name: "index_links_on_cached_votes_down", using: :btree
+  add_index "links", ["cached_votes_score"], name: "index_links_on_cached_votes_score", using: :btree
+  add_index "links", ["cached_votes_total"], name: "index_links_on_cached_votes_total", using: :btree
+  add_index "links", ["cached_votes_up"], name: "index_links_on_cached_votes_up", using: :btree
+  add_index "links", ["cached_weighted_average"], name: "index_links_on_cached_weighted_average", using: :btree
+  add_index "links", ["cached_weighted_score"], name: "index_links_on_cached_weighted_score", using: :btree
+  add_index "links", ["cached_weighted_total"], name: "index_links_on_cached_weighted_total", using: :btree
+  add_index "links", ["user_id"], name: "index_links_on_user_id", using: :btree
 
   create_table "themes", force: :cascade do |t|
     t.string   "name"
@@ -77,8 +80,8 @@ ActiveRecord::Schema.define(version: 20151103134031) do
     t.string   "last_sign_in_ip"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "votes", force: :cascade do |t|
     t.integer  "votable_id"
@@ -92,7 +95,8 @@ ActiveRecord::Schema.define(version: 20151103134031) do
     t.datetime "updated_at"
   end
 
-  add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope"
-  add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
+  add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope", using: :btree
+  add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
 
+  add_foreign_key "comments", "users"
 end
