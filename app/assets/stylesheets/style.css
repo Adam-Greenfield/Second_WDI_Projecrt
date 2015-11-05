@@ -222,13 +222,14 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
 }
 
 .csstransforms .cn-wrapper li:nth-child(odd) a {
-  background: -webkit-linear-gradient(black, #800080, black);
+  background: -webkit-linear-gradient(black, #8B0000, black);
 
   background-color: hsla(0, 88%, 63%, 1);
 }
 
 .csstransforms .cn-wrapper li:nth-child(even) a {
-  background: -webkit-linear-gradient(black, #8B008B, #800080, red);
+  background: -webkit-linear-gradient(black, #B22222
+, black);
   background-color: hsla(0, 88%, 65%, 1);
 }
 
