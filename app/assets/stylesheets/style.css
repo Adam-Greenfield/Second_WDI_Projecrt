@@ -36,6 +36,19 @@ section {
 .field input{
   color: black;
 }
+.field #user_bio{
+  color: black;
+}
+
+.notice {
+  color: #DCDCDC;
+  position: relative;
+  text-align: center;
+}
+
+.alert {
+
+}
 
 .csstransforms .cn-wrapper {
   font-size: 1em;
