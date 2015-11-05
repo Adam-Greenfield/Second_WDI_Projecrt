@@ -39,7 +39,9 @@ section {
 .field #user_bio{
   color: black;
 }
-
+.field #theme_description {
+  color: black;
+}
 .notice {
   color: #DCDCDC;
   position: relative;
