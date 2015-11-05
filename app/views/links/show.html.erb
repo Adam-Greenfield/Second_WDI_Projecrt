@@ -1,29 +1,23 @@
 
+<div class="themeBox">
+  <p>
+  <strong class="themeLink"> <%= @link.title %></strong>
+  </p>
 
-<p>
-  <strong> <%= @link.title %></strong>
- 
-</p>
+  <p>
+    <strong> <a href=<%= @link.url %>>Visit</a></strong> 
+  </p>
 
-<p>
-  <strong> <a href=<%= @link.url %>>Visit</a></strong>
- 
-</p>
+  <p>
+    <strong>Theme:</strong>
+    <%= link_to @link.theme.name, theme_path(@link.theme) %>
+  </p>
 
-<p>
-  <strong>Thumbnail:</strong>
-  <%= @link.thumbnail %>
-</p>
-
-<p>
-  <strong>Theme:</strong>
-  <%= link_to @link.theme.name, theme_path(@link.theme) %>
-</p>
-
-<% if @link.user == current_user %>
-<%= link_to 'Edit', edit_link_path(@link) %> |
-<% end %>
-<%= link_to 'Back', links_path %>
+  <% if @link.user == current_user %>
+  <%= link_to 'Edit', edit_link_path(@link) %> |
+  <% end %>
+  <%= link_to 'Back', links_path %>
+</div>
 
 <h3 class="comments_title">
   <%= @link.comments.count %> Comments
@@ -33,9 +27,9 @@
   <%= render :partial => @link.comments %>
 </div>
 <%= simple_form_for [@link, Comment.new]  do |f| %>
-  <div class="field">
-    <%= f.text_area :body, class: "form-control" %>
-  </div>
-  <br>
-  <%= f.submit "Add Comment", class: "btn btn-primary" %>
-  <% end %>
+<div class="field">
+  <%= f.text_area :body, class: "form-control" %>
+</div>
+<br>
+<%= f.submit "Add Comment", class: "btn btn-primary" %>
+<% end %>

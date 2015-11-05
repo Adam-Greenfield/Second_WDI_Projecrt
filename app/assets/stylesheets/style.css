@@ -343,3 +343,19 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
 .input {
   color: black;
 }
+
+.themeBox {
+  text-align: center;
+  font-size: 17px;
+}
+
+.themeLink {
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+#cn-button {
+  background-color: black;
+  color: white;
+
+}
