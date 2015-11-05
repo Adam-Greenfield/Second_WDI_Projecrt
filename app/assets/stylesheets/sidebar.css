@@ -7,8 +7,14 @@
 
 .sponsor {
   background-image: url("http://3.bp.blogspot.com/-m00TSPBn8bA/VF-PF3O6YdI/AAAAAAAAB04/KVxQlexu1Yk/s1600/DSC05628.jpg");
+  background-width: 256px;
+  background-height: 171px;
+  background-size: cover;
+  text-align: center;
+  line-height: 171px;
   width: 256px;
-
   height: 171px;
+  font-size: 70px;
+  letter-spacing: 10px;
 
 }
