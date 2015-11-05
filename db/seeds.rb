@@ -9,17 +9,24 @@ require "faker"
 
 include Faker
 
+users = [];
+links = [];
+
 100.times do
+  password = Faker::Lorem.characters(8)
   user = User.create ({
     first_name: Faker::Name.first_name,
     second_name: Faker::Name.last_name,
     username: Faker::Name.name,
-    bio: Faker::Lorem.sentences(3),
+    bio: "hello",
     email: Faker::Internet.email,
     created_at: Faker::Date.between(12.days.ago, 2.days.ago),
     updated_at: Faker::Date.between(2.days.ago, Date.today),
-    encrypted_password: Faker::Lorem.word
+    password: password,
+    password_confirmation: password,
     })
+  user.save
+  users << user
 end
 
 20.times do
@@ -29,6 +36,7 @@ end
     created_at: Faker::Date.between(12.days.ago, 2.days.ago),
     updated_at: Faker::Date.between(2.days.ago, Date.today)
     })
+  theme.save
 end
 
 500.times do
@@ -37,16 +45,22 @@ end
     url: Faker::Internet.url,
     created_at: Faker::Date.between(12.days.ago, 2.days.ago),
     updated_at: Faker::Date.between(2.days.ago, Date.today),
-    user_id: Faker::Number.between(1, 50),
+    user_id: Faker::Number.between(1, 100),
     theme_id: Faker::Number.between(1, 20)
     })
+  link.save
+  links << link
 end
 
 400.times do
   comment = Comment.create ({
-    link_id: Faker::Number.between(1, 500),
-    user_id: Faker::Number.between(1, 100),
-    body: Faker::Lorem.sentence(6, true, 6)
+    body: Faker::Lorem.sentence(6, true, 6),
+    created_at: Faker::Date.between(12.days.ago, 2.days.ago),
+    updated_at: Faker::Date.between(2.days.ago, Date.today),
     })
+
+  comment.user = users.shuffle.first
+  comment.link = links.shuffle.first
+  comment.save
 end
 
