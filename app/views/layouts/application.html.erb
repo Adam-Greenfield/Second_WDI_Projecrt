@@ -17,7 +17,7 @@
 <header>
 <div class="themeTitle">
 <% @themes = Theme.all%>
-<% @themes.sample(11).each do |theme| %>
+<% @themes.sample(9).each do |theme| %>
 <%= link_to theme.name, theme, class: "themeName" %>
 <% end %>
 </div>
