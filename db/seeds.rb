@@ -13,7 +13,7 @@ include Faker
   user = User.create ({
     first_name: Name.first_name,
     second_name: Name.last_name,
-    username: App.name,
+    username: Faker::App.name,
     bio: Lorem.sentences(3),
     email: Internet.email,
     created_at: Faker::Date.between(12.days.ago, 2.days.ago),
@@ -26,8 +26,8 @@ end
   theme = Theme.create ({
     name: Hacker.noun,
     description: Lorem.sentences(2),
-    created_at: Date.between(12.days.ago, 2.days.ago),
-    updated_at: Date.between(2.days.ago, Date.today)
+    created_at: Faker::Date.between(12.days.ago, 2.days.ago),
+    updated_at: Faker::Date.between(2.days.ago, Date.today)
     })
 end
 
@@ -35,8 +35,8 @@ end
   link = Link.create ({
     title: Lorem.sentence(3),
     url: Internet.url,
-    created_at: Date.between(12.days.ago, 2.days.ago),
-    updated_at: Date.between(2.days.ago, Date.today),
+    created_at: Faker::Date.between(12.days.ago, 2.days.ago),
+    updated_at: Faker::Date.between(2.days.ago, Date.today),
     user_id: Number.between(1, 50),
     theme_id: Number.between(1, 20)
     })
