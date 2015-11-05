@@ -49,7 +49,9 @@ section {
 }
 
 .alert {
-
+  color: #DCDCDC;
+  position: relative;
+  text-align: center;
 }
 
 .csstransforms .cn-wrapper {
