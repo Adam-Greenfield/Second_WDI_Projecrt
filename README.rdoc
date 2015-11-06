@@ -1,28 +1,16 @@
-== README
+Nova
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This website was created as part of the WDI course I took in 2015. It uses
+ruby on rails and the gems Devise, Acts as Votebale, Ransack and Will Paginate.
+This website is a Reddit clone specifically about space and physics, with seeded data
+(using Faker) to represent users, links and themes(sub reddits).
 
-Things you may want to cover:
+The site can be found on Heroku here https://hidden-bastion-6000.herokuapp.com
 
-* Ruby version
+My main focus on this project was making something that looked great,
+ as previously I had focused mainly on functionality and the back end. I think I
+ have achieved this. If I did this project again, I would definitly make the
+ comments commentable, to make conversation between users more possible in the case of high traffic.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+ The featurd institute side bar is just for show at the moment, with plans to promote 
+ companies if the site ever saw input from real users.
