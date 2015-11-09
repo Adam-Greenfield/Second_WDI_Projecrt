@@ -14,3 +14,8 @@ My main focus on this project was making something that looked great,
 
  The featurd institute side bar is just for show at the moment, with plans to promote 
  companies if the site ever saw input from real users.
+
+ Gems used:
+ gem 'will_paginate', '~> 3.0'
+ gem 'simple_form'
+ gem 'bootstrap-sass', '~> 3.3.5'
