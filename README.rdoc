@@ -1,21 +1,34 @@
 Nova
 
-This website was created as part of the WDI course I took in 2015. It uses
-ruby on rails and the gems Devise, Acts as Votebale, Ransack and Will Paginate.
+This website was created as part of the WDI course I took in 2015.
 This website is a Reddit clone specifically about space and physics, with seeded data
 (using Faker) to represent users, links and themes(sub reddits).
 
 The site can be found on Heroku here https://hidden-bastion-6000.herokuapp.com
 
-My main focus on this project was making something that looked great,
- as previously I had focused mainly on functionality and the back end. I think I
- have achieved this. If I did this project again, I would definitly make the
- comments commentable, to make conversation between users more possible in the case of high traffic.
+My main focus on this project was making something that looked great in addition to having a solid back end.
+I chose to create Nova as I love astro physics and space in general, and I am also a big fan of reddit, I like
+the fact that front page is representative of the community. I went for a modern aesthetic, with a minimal design
+contrasted by exciting features such as a dynamic nav bar and an interactive title.
 
- The featurd institute side bar is just for show at the moment, with plans to promote 
- companies if the site ever saw input from real users.
+The most important result for me in this project was the become compfortable with rails, and be able to
+generate database websites by myself, and I feel I have succeeded in this regard.
+
+In my spare time, I plan to make the following improvements:
+
+-I will make the comments commentable, to make conversation between users more possible in the case of high user traffic.
+-I will make the site responsive for mobile and tablet interfaces
+-I will create real sub-reddits (Themes)
+-I will include a dynaic featured institute system, depending on world events
+
+
 
  Gems used:
+
  gem 'will_paginate', '~> 3.0'
  gem 'simple_form'
  gem 'bootstrap-sass', '~> 3.3.5'
+ gem 'devise'
+ gem 'acts_as_votable'
+ gem 'ransack'
+ gem 'faker'
